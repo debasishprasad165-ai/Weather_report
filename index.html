@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a2b">
+  <meta name="description" content="A clean, responsive weather report website built with HTML, CSS and JavaScript.">
+  <title>SkyCast — Weather Report</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="SkyCast home"><span class="brand-mark">✦</span> weather_mate</a>
+      <span class="top-note">YOUR DAILY WEATHER, CLEARLY</span>
+    </header>
+
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">WEATHER REPORT</p>
+        <h1 id="page-title">A little more in<br><span>the know.</span></h1>
+      </div>
+      <form class="search" id="search-form" role="search">
+        <label class="sr-only" for="city-input">Search for a city</label>
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="city-input" name="city" type="search" placeholder="Search a city..." autocomplete="off" required>
+        <button type="submit" aria-label="Search">→</button>
+      </form>
+    </section>
+
+    <p class="status" id="status" role="status" aria-live="polite">Showing a sample report. Search a city to get started.</p>
+
+    <section class="weather-grid" aria-label="Weather report">
+      <article class="current-card panel">
+        <div class="card-heading"><span class="location-pin">⌖</span><span id="location">San Francisco, US</span><span class="live-dot" aria-label="Current weather"></span></div>
+        <div class="current-main">
+          <div><p class="date-label" id="today-label">TODAY</p><p class="temperature"><span id="temperature">18</span><span class="degree">°</span></p><p class="condition" id="condition">Partly cloudy</p></div>
+          <div class="weather-art" id="weather-art" aria-hidden="true">⛅</div>
+        </div>
+        <div class="current-divider"></div>
+        <div class="stats">
+          <div class="stat"><span class="stat-icon">⌁</span><div><span class="stat-label">FEELS LIKE</span><strong><span id="feels-like">17</span>°</strong></div></div>
+          <div class="stat"><span class="stat-icon">◌</span><div><span class="stat-label">HUMIDITY</span><strong><span id="humidity">68</span><small>%</small></strong></div></div>
+          <div class="stat"><span class="stat-icon">↗</span><div><span class="stat-label">WIND</span><strong><span id="wind">12</span><small> km/h</small></strong></div></div>
+        </div>
+      </article>
+
+      <article class="forecast-card panel">
+        <div class="section-heading"><div><p class="eyebrow">PLAN AHEAD</p><h2>5-day forecast</h2></div><span class="calendar-icon">▦</span></div>
+        <div class="forecast-list" id="forecast-list">
+          <div class="forecast-row"><span class="forecast-day">Tue</span><span class="forecast-icon">☀️</span><span class="forecast-condition">Sunny</span><span class="forecast-temp">21° <span>/ 14°</span></span></div>
+          <div class="forecast-row"><span class="forecast-day">Wed</span><span class="forecast-icon">⛅</span><span class="forecast-condition">Partly cloudy</span><span class="forecast-temp">19° <span>/ 13°</span></span></div>
+          <div class="forecast-row"><span class="forecast-day">Thu</span><span class="forecast-icon">🌦️</span><span class="forecast-condition">Light rain</span><span class="forecast-temp">17° <span>/ 12°</span></span></div>
+          <div class="forecast-row"><span class="forecast-day">Fri</span><span class="forecast-icon">☁️</span><span class="forecast-condition">Cloudy</span><span class="forecast-temp">18° <span>/ 13°</span></span></div>
+          <div class="forecast-row"><span class="forecast-day">Sat</span><span class="forecast-icon">☀️</span><span class="forecast-condition">Sunny</span><span class="forecast-temp">22° <span>/ 15°</span></span></div>
+        </div>
+        <p class="forecast-footnote">A fresh look at the days ahead.</p>
+      </article>
+    </section>
+
+    <footer><span>MADE FOR CLEARER DAYS</span><span>SKYCAST <span class="footer-star">✦</span> WEATHER</span></footer>
+  </main>
+</body>
+</html>
